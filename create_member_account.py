@@ -13,7 +13,7 @@ def create_member_account():
     expire_date = entry_expire_date.get()
 
     try:
-        conn = psycopg2.connect("dbname=kkk user=postgres password=236204")
+        conn = psycopg2.connect("dbname=_dbname user=postgres password=_password")
         cursor = conn.cursor()
 
         # Insert member information into Members table

@@ -13,7 +13,7 @@ def update_member():
     new_expire_date = entry_expire_date.get()
     
     try:
-        conn = psycopg2.connect("dbname=kkk user=postgres password=236204")
+        conn = psycopg2.connect("dbname=_dbname user=postgres password=_password")
         cursor = conn.cursor()
 
         cursor.execute("UPDATE Members SET first_name = %s, last_name = %s, address = %s, date_of_birth = %s, phone = %s, email = %s, expire_date = %s WHERE account_id = %s",

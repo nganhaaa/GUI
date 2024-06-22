@@ -11,7 +11,7 @@ def search_books_by_genre():
     genre_name = entry_genre.get()
 
     try:
-        conn = psycopg2.connect("dbname=kkk user=postgres password=236204")
+        conn = psycopg2.connect("dbname=_dbname user=postgres password=_password")
         cursor = conn.cursor()
 
         # Tìm kiếm sách theo thể loại
