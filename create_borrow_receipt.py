@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 import psycopg2
+import tempCodeRunnerFile
 
 def create_borrowing_receipt():
     receipt_id = entry_receipt_id.get()
@@ -15,7 +16,7 @@ def create_borrowing_receipt():
     status = 'borrowed'
 
     try:
-        conn = psycopg2.connect("dbname=_dbname user=postgres password=_password")
+        conn = tempCodeRunnerFile._conn
         cursor = conn.cursor()
 
         cursor.execute("""

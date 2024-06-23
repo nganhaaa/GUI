@@ -6,7 +6,7 @@ def delete_genre():
     genre_id = entry_genre_id.get()
     
     try:
-        conn = psycopg2.connect("dbname=_dbname user=postgres password=_password")
+        conn = tempCodeRunnerFile._conn
         cursor = conn.cursor()
 
         # Truy vấn SQL để xóa các liên kết từ bảng Book_Genre dựa trên genre_id

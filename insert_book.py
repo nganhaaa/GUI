@@ -13,7 +13,7 @@ def insert_book():
     price = int(entry_price.get())
 
     try:
-        conn = psycopg2.connect("dbname=_dbname user=postgres password=_password")
+        conn = tempCodeRunnerFile._conn
         cursor = conn.cursor()
 
         cursor.execute("INSERT INTO Books VALUES (%s, %s, %s, %s, %s, %s, %s, %s)",

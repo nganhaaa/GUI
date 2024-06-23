@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 import psycopg2
+import tempCodeRunnerFile
 
 def create_borrowed_book_record():
     receipt_id = entry_receipt_id.get()
@@ -9,7 +10,7 @@ def create_borrowed_book_record():
     status = entry_status.get()
 
     try:
-        conn = psycopg2.connect("dbname=your_db_name user=your_username password=your_password")
+        conn = tempCodeRunnerFile._conn
         cursor = conn.cursor()
 
         # Truy vấn SQL để chèn bản ghi vào bảng Borrowed_Books

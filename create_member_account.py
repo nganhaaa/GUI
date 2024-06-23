@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 import psycopg2
+import tempCodeRunnerFile
 
 def create_member_account():
     # Retrieve member information from entry fields
@@ -13,7 +14,7 @@ def create_member_account():
     expire_date = entry_expire_date.get()
 
     try:
-        conn = psycopg2.connect("dbname=_dbname user=postgres password=_password")
+        conn = tempCodeRunnerFile._conn
         cursor = conn.cursor()
 
         # Insert member information into Members table

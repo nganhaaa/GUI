@@ -1,13 +1,14 @@
 import tkinter as tk
 from tkinter import messagebox
 import psycopg2
+import tempCodeRunnerFile
 
 # Function to count total borrowed quantity of books for a member
 def count_borrowed_quantity():
     member_account_id = entry_member_account_id.get()
 
     try:
-        conn = psycopg2.connect("dbname=_dbname user=postgres password=_password")
+        conn = tempCodeRunnerFile._conn
         cursor = conn.cursor()
 
         # SQL query to count total borrowed quantity of books for the member with given member_account_id

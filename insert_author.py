@@ -9,7 +9,7 @@ def insert_author():
     nationality = entry_nationality.get()
 
     try:
-        conn = psycopg2.connect("dbname=_dbname user=postgres password=_password")
+        conn = tempCodeRunnerFile._conn
         cursor = conn.cursor()
 
         cursor.execute("INSERT INTO Authors VALUES (%s, %s, %s, %s)",
